@@ -7,6 +7,8 @@ Semester extrem unübersichtlich, weil sich keine Kurse ausblenden lassen.
 Moodle magische Navigation löst als Userscript-Plugin dieses Problem durch eine einfache, elegante und vor allem blitzschnelle
 Bedienung.
 
+![Moodle Magische Navigation](https://raw.githubusercontent.com/jlauinger/moodle-magic-navigation/master/screenshot.png)
+
 ## Installation
 
 #### Schritt 1
