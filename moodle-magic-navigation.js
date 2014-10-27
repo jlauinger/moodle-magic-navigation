@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name       Moodle Magische Navigation
-// @namespace  http://lauinger-it.de
+// @namespace  https://lauinger-it.de
 // @version    0.1
 // @description  erweitert die Informatik Moodle Startseite um eine Auto-Login-Funktion, die direkt einen Kurs wählt
 // @match      https://moodle.informatik.tu-darmstadt.de/*
