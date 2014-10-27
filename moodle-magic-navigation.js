@@ -4,6 +4,7 @@
 // @version    0.1
 // @description  erweitert die Informatik Moodle Startseite um eine Auto-Login-Funktion, die direkt einen Kurs wählt
 // @match      https://moodle.informatik.tu-darmstadt.de/*
+// @grant      none
 // @require    http://code.jquery.com/jquery-2.0.3.min.js
 // @require    http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js
 // @require    http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js
