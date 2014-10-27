@@ -16,6 +16,9 @@ Du verwendest:
  * Das Plugin Tampermonkey, Greasemonkey bzw. ViolentMonkey
  * Das Standard-Moodletemplate der TU Darmstadt
 
+Mit einem alternativen Moodletemplate kann es sein, dass das Plugin funktioniert, es kann aber auch Fehler geben. Versuche
+in diesem Fall einmal das Standard-Template.
+
 #### Schritt 2:
 
 * Erstelle ein neues Userscript, das auf der Seite `https://moodle.informatik.tu-darmstadt.de/*` aktiv ist
