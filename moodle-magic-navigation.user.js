@@ -69,18 +69,19 @@ GM_addStyle (namespacedBootstrap);
 					location.href = 'https://sso.hrz.tu-darmstadt.de/login?service=https%3A%2F%2Fmoodle.informatik.tu-darmstadt.de%2Flogin%2Findex.php%3FauthCAS%3DCAS';
 				}
 			}
-			// escape?
-			else if (e.keyCode === 27) {
-				// Keylistener entfernen
-				$(document).unbind('keypress').unbind('keydown');
-			}
-			// entfernen?
-			else if (e.keyCode === 46) {
-				// Popover schließen
-				$('#MIN_label').popover('hide');
+			// entfernen / escape / f1
+			else if (e.keyCode === 46 || e.keyCode == 27 || e.keyCode == 112) {
+				// Popover toggle
+				$('#MIN_label').popover('toggle');
 			}
 		});
 		$(document).keypress(function(e){
+			var tag = e.target.tagName.toUpperCase();
+			// ignore if textarea is focused
+			if (tag == "INPUT" || tag == "TEXTAREA") return;
+			// ignore control / command combinations and f5
+			if (e.ctrlKey || e.metaKey || e.keyCode == 116) return;
+			
 			// nach einem Hotkey suchen
 			var course = _.find(courses, function(c){
 				return c.hotkey === e.charCode;
@@ -150,8 +151,7 @@ GM_addStyle (namespacedBootstrap);
 			_.each(courses, function(c){
 				content += '<li><span class="label label-primary">' + String.fromCharCode(c.hotkey) + '</span>\t' + c.name + '</li>';
 			});
-			content += '<li><span class="label label-warning">Entf</span>\tPopover schließen</li>';
-			content += '<li><span class="label label-warning">Esc</span>\tKeylistener entfernen</li></ul>';
+			content += '<li><span class="label label-warning">Esc</span>\tPopover schließen</li></ul>';
 			content += '<button id="MIN_logout" class="btn btn-xs btn-danger" style="width: 100%;">Abmelden</button>';
 		}
 		else {
@@ -161,8 +161,7 @@ GM_addStyle (namespacedBootstrap);
 				content += '<li><span class="label label-primary">' + String.fromCharCode(c.hotkey) + '</span>\t' + c.name + '</li>';
 			});
 			content += '<li><span class="label label-success">Return</span>\tNur anmelden</li>';
-			content += '<li><span class="label label-warning">Entf</span>\tPopover schließen</li>';
-			content += '<li><span class="label label-warning">Esc</span>\tKeylistener entfernen</li></ul>';
+			content += '<li><span class="label label-warning">Esc</span>\tPopover schließen</li></ul>';
 		}
 		
 		return content;
